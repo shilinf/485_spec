@@ -1,0 +1,8 @@
+RewriteEngine On
+
+# Redirect all traffic to index.php except:
+#  - index.php
+#  - static/
+#  - robots.txt (convention)
+RewriteCond $1 !^(index\.php|static|robots\.txt)
+RewriteRule ^(.*)$ /index.php [L]
